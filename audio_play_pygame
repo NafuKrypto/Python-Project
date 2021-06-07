@@ -1,0 +1,5 @@
+from pygame import mixer  # Load the popular external library
+
+mixer.init()
+mixer.music.load('output.mp3') #the mp3 file name you want to play
+mixer.music.play()
