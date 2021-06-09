@@ -6,7 +6,7 @@ Created on Wed Jun  9 20:11:32 2021
 """
 
 from gtts import gTTS
-#import os
+ 
 language = 'en'
 with open('lyrics.txt') as f:
     lines = f.readlines()
@@ -20,9 +20,7 @@ for x in lines:
 #print(lines)
 print(text)
 output = gTTS(text=text, lang=language,slow=False)
-##text="Smooth like butter.Like a criminal undercover.Gon' pop like trouble.Breakin' into your heart like that.Cool shade stunner.Yeah, I owe it all to my mother.Hot like summer.Yeah, I'm makin' you sweat like that"
-
-
+ 
 
 
 
