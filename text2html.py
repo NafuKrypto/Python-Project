@@ -9,7 +9,7 @@ import textile
 
 import tkinter as tk
 
-def printInput():
+def convertToHtml():
     inp = T.get(1.0, "end-1c")
     html = textile.textile( inp )
     print("\nAfter converted to HTML: \n",html)
@@ -25,7 +25,7 @@ T = tk.Text(root, height = 5, width = 52)
 
 # Create button for next text.
 T.pack()
-b1 = tk.Button(root, text = "Submit", command=printInput)
+b1 = tk.Button(root, text = "Submit", command=convertToHtml)
 b1.pack() 
 
 lbl = tk.Label(root, text = "")
