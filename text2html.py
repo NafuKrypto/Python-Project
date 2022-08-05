@@ -1,36 +1,27 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jun 13 17:41:50 2022
-
-@author: hp
-"""
-
 import textile
-
 import tkinter as tk
 
-def convertToHtml():
-    inp = T.get(1.0, "end-1c")
-    html = textile.textile( inp )
+def covertToHtml():
+    #fornowempty
+    inp=T.get(1.0,"end-1c")
+    html=textile.textile(inp)
     print("\nAfter converted to HTML: \n",html)
-    lbl.config(text = "Converted Html : "+html) 
- 
-root = tk.Tk()
- 
-# specify size of window.
+    lbl.config(text="Converted Html : "+html)
+
+root=tk.Tk()
 root.geometry("250x170")
- 
-# Create text widget and specify size.
-T = tk.Text(root, height = 5, width = 52)
 
-# Create button for next text.
+# Create Text for input
+T=tk.Text(root,height=5,width=52)
 T.pack()
-b1 = tk.Button(root, text = "Submit", command=convertToHtml)
-b1.pack() 
+T.insert(tk.END,"""""")
 
-lbl = tk.Label(root, text = "")
-lbl.pack() 
-# Insert The Fact.
-T.insert(tk.END,"""""" )
-# Label Creation
-tk.mainloop()
+# Create button for result generation
+b1=tk.Button(root,text="Submit",command=covertToHtml)
+b1.pack()
+
+# Create label for result display
+lbl=tk.Label(root,text="")
+lbl.pack()
+
+root.mainloop()
